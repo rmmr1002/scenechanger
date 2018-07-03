@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Luncheon" size="1.000000 0.738000" />
+    <ImageTarget name="preacher_el_greeco" size="10.000000 12.467532" />
+    <ImageTarget name="0052w" size="10.000000 7.838542" />
+    <ImageTarget name="0036w" size="10.000000 15.000000" />
+    <ImageTarget name="0043w-PhilpsCulture" size="10.000000 6.666667" />
+    <ImageTarget name="chips" size="16.000000 11.200000" />
+  </Tracking>
+</QCARConfig>
