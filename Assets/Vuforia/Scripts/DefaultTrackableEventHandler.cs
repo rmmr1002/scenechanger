@@ -78,7 +78,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         XRSettings.enabled= false;
         SceneManager.UnloadSceneAsync("scene2");
         other.AddScore(score,email);
-        //SceneManager.LoadSceneAsync(sceneName: "scene3");
+        SceneManager.LoadSceneAsync("scene1");
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);

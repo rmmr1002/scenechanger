@@ -21,12 +21,14 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 // Handler for UI buttons on the scene.  Also performs some
 // necessary setup (initializing the firebase app, etc) on
 // startup.
 public class UIHandler : MonoBehaviour {
 
+    public Text txt;
   ArrayList leaderBoard = new ArrayList();
   Vector2 scrollPosition = Vector2.zero;
   private Vector2 controlsScrollViewVector = Vector2.zero;
@@ -47,6 +49,7 @@ public class UIHandler : MonoBehaviour {
   // the required dependencies to use Firebase, and if not,
   // add them if possible.
   protected virtual void Start() {
+        XRSettings.enabled = false;
     leaderBoard.Clear();
     leaderBoard.Add("Firebase Top " + MaxScores.ToString() + " Scores");
 
@@ -106,6 +109,11 @@ public class UIHandler : MonoBehaviour {
     if (Input.GetKeyDown(KeyCode.Escape)) {
       Application.Quit();
     }
+
+    foreach(var child in leaderBoard)
+        {
+            txt.text = txt.text + child.ToString();
+        }
   }
 
   // Output text to the debug log text field, as well as the console.
@@ -194,7 +202,8 @@ public class UIHandler : MonoBehaviour {
 
   // Render the buttons and other controls.
   void GUIDisplayControls() {
-    if (UIEnabled) {
+      
+            if (UIEnabled) {
       controlsScrollViewVector =
           GUILayout.BeginScrollView(controlsScrollViewVector);
       GUILayout.BeginVertical();
@@ -258,26 +267,26 @@ public class UIHandler : MonoBehaviour {
 
     if (Screen.width < Screen.height) {
       // Portrait mode
-      controlArea = new Rect(0.0f, 0.0f, Screen.width, Screen.height * 0.5f);
+      //controlArea = new Rect(0.0f, 0.0f, Screen.width, Screen.height * 0.5f);
       leaderBoardArea = new Rect(0, Screen.height * 0.5f, Screen.width * 0.5f, Screen.height * 0.5f);
-      logArea = new Rect(Screen.width * 0.5f, Screen.height * 0.5f, Screen.width * 0.5f, Screen.height * 0.5f);
+      //logArea = new Rect(Screen.width * 0.5f, Screen.height * 0.5f, Screen.width * 0.5f, Screen.height * 0.5f);
     } else {
       // Landscape mode
-      controlArea = new Rect(0.0f, 0.0f, Screen.width * 0.5f, Screen.height);
+      //controlArea = new Rect(0.0f, 0.0f, Screen.width * 0.5f, Screen.height);
       leaderBoardArea = new Rect(Screen.width * 0.5f, 0, Screen.width * 0.5f, Screen.height * 0.5f);
-      logArea = new Rect(Screen.width * 0.5f, Screen.height * 0.5f, Screen.width * 0.5f, Screen.height * 0.5f);
+      //logArea = new Rect(Screen.width * 0.5f, Screen.height * 0.5f, Screen.width * 0.5f, Screen.height * 0.5f);
     }
 
     GUILayout.BeginArea(leaderBoardArea);
     GUIDisplayLeaders();
     GUILayout.EndArea();
 
-    GUILayout.BeginArea(logArea);
+    /*GUILayout.BeginArea(logArea);
     GUIDisplayLog();
     GUILayout.EndArea();
 
     GUILayout.BeginArea(controlArea);
     GUIDisplayControls();
-    GUILayout.EndArea();
+    GUILayout.EndArea();*/
   }
 }
