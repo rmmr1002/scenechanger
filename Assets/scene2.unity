@@ -463,7 +463,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 1476148820}
+  - {fileID: 1079687838}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,15 +519,15 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: preacher_el_greeco
+  mTrackableName: Luncheon
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/ARPhilipsVC-3.xml
   mExtendedTracking: 0
-  mAspectRatio: 1.2467532
+  mAspectRatio: 0.738
   mImageTargetType: 0
-  mWidth: 4.010417
-  mHeight: 5
+  mWidth: 1
+  mHeight: 0.738
 --- !u!4 &1008733194
 Transform:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 1008733188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -553,13 +553,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1008733188}
---- !u!21 &1476148820
+--- !u!21 &1079687838
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: preacher_el_greecoMaterial
+  m_Name: LuncheonMaterial
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -572,7 +572,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 90a44786b7584b8fb526cb5522fdde33, type: 3}
+        m_Texture: {fileID: 2800000, guid: fec08f1b629b47eb9a581d956910009c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -640,6 +640,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1572951397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1572951399}
+  - component: {fileID: 1572951398}
+  - component: {fileID: 1572951401}
+  - component: {fileID: 1572951400}
+  m_Layer: 0
+  m_Name: CloudRecognition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1572951398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572951397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -201013700, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AccessKey: 6498e1a027b2a6472e7162a437ee6be50f1575a8
+  SecretKey: 1a5e990f4a5bfa0eec827fcf75253db7b85168d4
+--- !u!4 &1572951399
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572951397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1572951400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572951397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a296afd1b449f744a59bb4dad1d614a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: El_Greeco
+  width: 0
+  image: a
+  application_metadata: 
+--- !u!114 &1572951401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1572951397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0030fef8e614fd44849478e8261dcc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1792509760
 Mesh:
   m_ObjectHideFlags: 0
@@ -787,7 +857,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.4010417, y: 0, z: 0.5}
+      m_Extent: {x: 0.5, y: 0, z: 0.369}
   m_Shapes:
     vertices: []
     shapes: []
@@ -840,7 +910,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 5655cdbe00000000000000bf000000000000803f0000000000000000000000005655cdbe000000000000003f000000000000803f00000000000000000000803f5655cd3e00000000000000bf000000000000803f000000000000803f000000005655cd3e000000000000003f000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf0000000091edbcbe000000000000803f000000000000000000000000000000bf0000000091edbc3e000000000000803f00000000000000000000803f0000003f0000000091edbcbe000000000000803f000000000000803f000000000000003f0000000091edbc3e000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0

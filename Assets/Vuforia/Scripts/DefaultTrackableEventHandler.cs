@@ -20,6 +20,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     public Namecheck other;
     public int score;
     public string email;
+    static int flag = 0;
     #region PRIVATE_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
@@ -77,7 +78,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     {
         XRSettings.enabled= false;
         SceneManager.UnloadSceneAsync("scene2");
+        GlobalData.identifier = score;
         other.AddScore(score,email);
+        
         SceneManager.LoadSceneAsync("scene1");
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);

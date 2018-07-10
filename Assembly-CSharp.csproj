@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GlobalData.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\HeadsetDemoManager.cs" />
@@ -157,9 +158,11 @@
      <Compile Include="Assets\LoadImageAndDisplay.cs" />
      <Compile Include="Assets\Namecheck.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\PostNewTrackableRequest.cs" />
      <Compile Include="Assets\ScriptForTexture.cs" />
      <Compile Include="Assets\Scripts\Menubehavior.cs" />
      <Compile Include="Assets\Scripts\NoARPlease.cs" />
+     <Compile Include="Assets\StartUpload.cs" />
      <Compile Include="Assets\UIHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
@@ -180,6 +183,7 @@
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+     <None Include="Assets\JsonDotNet\link.xml" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-6DOF.xml" />
      <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
@@ -299,6 +303,9 @@
  <Reference Include="Google.ProtocolBuffers">
  <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
@@ -338,6 +345,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Rohan/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1A137137-96DD-7BDD-15B7-54A0D43755AD}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -182,6 +182,9 @@
  <Reference Include="Google.ProtocolBuffers">
  <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Compat">
  <HintPath>C:/Users/Rohan/Documents/Unity WorkSpace/scenechanger/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
  </Reference>
@@ -229,6 +232,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{1A137137-96DD-7BDD-15B7-54A0D43755AD}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{AF9C618F-C847-4074-7F59-873A8118BDD5}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

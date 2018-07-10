@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 public class LoadImageAndDisplay : MonoBehaviour {
     public static byte[] fileContents;
-    string url = "https://firebasestorage.googleapis.com/v0/b/unity-ec9f0.appspot.com/o/Civita_Castellana.jpg?alt=media&token=cf27532d-8aa6-47fc-85bd-6ed9d4d0c7aa";
+
+    string url = "";
     Texture2D txt;
 
     IEnumerator LoadImg()
@@ -20,6 +21,10 @@ public class LoadImageAndDisplay : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        if (GlobalData.identifier == 15)
+            url = "https://firebasestorage.googleapis.com/v0/b/unity-ec9f0.appspot.com/o/Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg?alt=media&token=9494fa30-9acb-4800-8002-1b032a14bd06";
+        else if(GlobalData.identifier==10)
+            url= "https://firebasestorage.googleapis.com/v0/b/unity-ec9f0.appspot.com/o/Preacher_El_Greeco.jpg?alt=media&token=45546859-3f82-4c7e-a215-700b2228f35e";
         StartCoroutine(LoadImg());
        /* Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
         {
